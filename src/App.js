@@ -1,12 +1,13 @@
 import "./App.css";
 import Player from "./components/AudioPlayer";
 import Playlist from "./components/Playlist";
+import { tracks } from "./data/tracks";
 
 function App() {
   return (
     <div className="App">
       <Playlist />
-      <Player />
+      <Player currentTrack={tracks[0]} />
     </div>
   );
 }

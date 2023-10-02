@@ -1,19 +1,21 @@
-import React from "react";
+import React, { useRef } from "react";
 import ProgressBar from "./ProgressBar";
 import Controls from "./Controls";
 import TrackInfo from "./TrackInfo";
-import AudioPlayer from "react-h5-audio-player";
 import { tracks } from "../data/tracks";
+import ReactAudioPlayer from "react-audio-player";
+
+import { ReactComponent as PlayIcon } from "../assets/icons/play.svg";
 
 const Player = ({ currentTrack }) => {
+  const audioPlayerRef = useRef();
+
   return (
     <div className="audio-player">
-      <AudioPlayer
-        header={`Now playing: ${tracks[0].title}`}
-        src={tracks[0].src}
-        onPlay={() => console.log("onPlay")}
-        onClickNext={() => console.log("onClickNext")}
-      />
+      {/* <ReactAudioPlayer src={currentTrack.src} ref={audioPlayerRef} controls /> */}
+      <button className="play-btn">
+        <PlayIcon />
+      </button>
       {/* <TrackInfo />
       <ProgressBar />
       <Controls /> */}
