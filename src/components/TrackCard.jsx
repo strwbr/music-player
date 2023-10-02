@@ -1,10 +1,10 @@
 import React from "react";
 import TrackInfo from "./TrackInfo";
 
-const TrackCard = () => {
+const TrackCard = ({ track }) => {
   return (
     <div>
-      <TrackInfo />
+      <TrackInfo track={track} />
       <p>03:56</p>
     </div>
   );

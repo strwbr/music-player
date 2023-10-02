@@ -1,0 +1,26 @@
+.audio-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.audio-cover {
+  width: 100px;
+  height: 100px;
+}
+
+.audio-cover img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15%;
+}
+
+.audio-title {
+  padding: 10px;
+}
+
+.audio-title p {
+  font-size: large;
+}
