@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import Player from "./components/Player";
 import Playlist from "./components/Playlist";
@@ -7,7 +8,7 @@ function App() {
   return (
     <div className="App">
       {/* <Playlist /> */}
-      <Player currentTrack={tracks[0]} />
+      <Player currentTrack={tracks[0]} tracks={tracks} />
     </div>
   );
 }

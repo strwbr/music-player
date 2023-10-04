@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ReactComponent as PlayIcon } from "../assets/icons/play.svg";
 import { ReactComponent as PauseIcon } from "../assets/icons/pause.svg";
 import { ReactComponent as PlayBackIcon } from "../assets/icons/play_back.svg";
@@ -10,7 +10,22 @@ import { ReactComponent as PlaySkipForwardIcon } from "../assets/icons/play_skip
 
 import "../styles/controls.css";
 
-const Controls = () => {
+const Controls = ({ audioPlayerRef, setIsRandom, nextSong }) => {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  // Нажатие на кнопку Play/Pause
+  const togglePlayPause = () => {
+    setIsPlaying((prev) => !prev);
+  };
+
+  useEffect(() => {
+    if (isPlaying) {
+      audioPlayerRef.current.audioEl.current.play();
+    } else {
+      audioPlayerRef.current.audioEl.current.pause();
+    }
+  }, [isPlaying, audioPlayerRef]);
+
   return (
     <div className="controls">
       <button className="controls-btn shuffle">
@@ -22,14 +37,13 @@ const Controls = () => {
       <button className="controls-btn">
         <PlayBackIcon />
       </button>
-      <button className="controls-btn">
-        <PlayIcon />
-        {/* if else <PauseIcon/> */}
+      <button className="controls-btn" onClick={togglePlayPause}>
+        {isPlaying ? <PauseIcon /> : <PlayIcon />}
       </button>
       <button className="controls-btn">
         <PlayForwardIcon />
       </button>
-      <button className="controls-btn">
+      <button className="controls-btn" onClick={nextSong}>
         <PlaySkipForwardIcon />
       </button>
       <button className="controls-btn">
