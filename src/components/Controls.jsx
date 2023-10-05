@@ -10,7 +10,7 @@ import { ReactComponent as PlaySkipForwardIcon } from "../assets/icons/play_skip
 
 import "../styles/controls.css";
 
-const Controls = ({ audioPlayerRef, setIsRandom, nextSong }) => {
+const Controls = ({ audioPlayerRef, setIsRandom, nextSong, currentTrack }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   // Нажатие на кнопку Play/Pause
@@ -24,7 +24,9 @@ const Controls = ({ audioPlayerRef, setIsRandom, nextSong }) => {
     } else {
       audioPlayerRef.current.audioEl.current.pause();
     }
-  }, [isPlaying, audioPlayerRef]);
+    // nextSong ниже может вызвать ошибки???
+    // сюда наверно лучше индекс вместо
+  }, [isPlaying, audioPlayerRef, nextSong]);
 
   return (
     <div className="controls">
