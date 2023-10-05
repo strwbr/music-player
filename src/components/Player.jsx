@@ -12,7 +12,7 @@ const Player = ({ tracks }) => {
   // ссылка на элемент аудио
   const audioPlayerRef = useRef();
 
-  const nextSong = () => {
+  const handleNextSong = () => {
     let newIndex = isRandom ? 0 : (trackIndex + 1) % tracks.length;
     setTrackIndex(newIndex);
     // setCurrentTrack(tracks[newIndex]);
@@ -24,19 +24,22 @@ const Player = ({ tracks }) => {
     <div className="audio-player">
       <TrackInfo track={tracks[trackIndex]} />
       <ReactAudioPlayer
-        controls
         src={tracks[trackIndex].src}
         ref={audioPlayerRef}
         onPlay={() => console.log("onPlay event")}
         onPause={() => console.log("onPause event")}
-        onEnded={nextSong}
+        onEnded={handleNextSong}
       />
       {/* <button onClick={() => console.log(getSrc())}>Get src</button> */}
       <ProgressBar />
       <Controls
         audioPlayerRef={audioPlayerRef}
+        isRandom={isRandom}
         setIsRandom={setIsPandom}
-        nextSong={nextSong}
+        handleNextSong={handleNextSong}
+        trackIndex={trackIndex}
+        setTrackIndex={setTrackIndex}
+        tracks={tracks}
         // currentTrack={currentTrack}
       />
     </div>

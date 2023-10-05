@@ -10,12 +10,42 @@ import { ReactComponent as PlaySkipForwardIcon } from "../assets/icons/play_skip
 
 import "../styles/controls.css";
 
-const Controls = ({ audioPlayerRef, setIsRandom, nextSong, currentTrack }) => {
+const Controls = ({
+  audioPlayerRef,
+  isRandom,
+  setIsRandom,
+  handleNextSong,
+  currentTrack,
+  trackIndex,
+  setTrackIndex,
+  tracks,
+}) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   // Нажатие на кнопку Play/Pause
   const togglePlayPause = () => {
     setIsPlaying((prev) => !prev);
+    console.log("togglePlayPause()");
+  };
+
+  const previousSong = () => {
+    setTrackIndex((prev) => (prev === 0 ? tracks.length - 1 : prev - 1));
+    console.log("previousSong()");
+  };
+
+  const handleShuffle = () => {
+    setIsRandom((prev) => !prev);
+    console.log("handleShuffle()");
+  };
+
+  const handlePlayForward = () => {
+    audioPlayerRef.current.audioEl.current.currentTime += 10;
+    console.log("handlePlayForward()");
+  };
+
+  const handlePlayBack = () => {
+    audioPlayerRef.current.audioEl.current.currentTime -= 10;
+    console.log("handlePlayBack()");
   };
 
   useEffect(() => {
@@ -26,26 +56,26 @@ const Controls = ({ audioPlayerRef, setIsRandom, nextSong, currentTrack }) => {
     }
     // nextSong ниже может вызвать ошибки???
     // сюда наверно лучше индекс вместо
-  }, [isPlaying, audioPlayerRef, nextSong]);
+  }, [isPlaying, audioPlayerRef, trackIndex]);
 
   return (
     <div className="controls">
-      <button className="controls-btn shuffle">
+      <button className="controls-btn shuffle" onClick={handleShuffle}>
         <ShuffleIcon />
       </button>
-      <button className="controls-btn">
+      <button className="controls-btn" onClick={previousSong}>
         <PlaySkipBackIcon />
       </button>
-      <button className="controls-btn">
+      <button className="controls-btn" onClick={handlePlayBack}>
         <PlayBackIcon />
       </button>
       <button className="controls-btn" onClick={togglePlayPause}>
         {isPlaying ? <PauseIcon /> : <PlayIcon />}
       </button>
-      <button className="controls-btn">
+      <button className="controls-btn" onClick={handlePlayForward}>
         <PlayForwardIcon />
       </button>
-      <button className="controls-btn" onClick={nextSong}>
+      <button className="controls-btn" onClick={handleNextSong}>
         <PlaySkipForwardIcon />
       </button>
       <button className="controls-btn">
