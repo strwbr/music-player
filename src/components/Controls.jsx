@@ -4,7 +4,9 @@ import { ReactComponent as PauseIcon } from "../assets/icons/pause.svg";
 import { ReactComponent as PlayBackIcon } from "../assets/icons/play_back.svg";
 import { ReactComponent as PlayForwardIcon } from "../assets/icons/play_forward.svg";
 import { ReactComponent as RepeatIcon } from "../assets/icons/repeat.svg";
+import { ReactComponent as RepeatClickedIcon } from "../assets/icons/repeat-clicked.svg";
 import { ReactComponent as ShuffleIcon } from "../assets/icons/shuffle.svg";
+import { ReactComponent as ShuffleClickedIcon } from "../assets/icons/shuffle-clicked.svg";
 import { ReactComponent as PlaySkipBackIcon } from "../assets/icons/play_skip_back.svg";
 import { ReactComponent as PlaySkipForwardIcon } from "../assets/icons/play_skip_forward.svg";
 
@@ -19,6 +21,8 @@ const Controls = ({
   trackIndex,
   setTrackIndex,
   tracks,
+  isLoop,
+  setLoop,
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -34,6 +38,7 @@ const Controls = ({
   };
 
   const handleShuffle = () => {
+    console.log(isRandom);
     setIsRandom((prev) => !prev);
     console.log("handleShuffle()");
   };
@@ -46,6 +51,11 @@ const Controls = ({
   const handlePlayBack = () => {
     audioPlayerRef.current.audioEl.current.currentTime -= 10;
     console.log("handlePlayBack()");
+  };
+
+  const handleLooping = () => {
+    setLoop((prev) => !prev);
+    console.log("handleLooping()");
   };
 
   useEffect(() => {
@@ -61,25 +71,25 @@ const Controls = ({
   return (
     <div className="controls">
       <button className="controls-btn shuffle" onClick={handleShuffle}>
-        <ShuffleIcon />
+        {isRandom ? <ShuffleClickedIcon /> : <ShuffleIcon />}
       </button>
-      <button className="controls-btn" onClick={previousSong}>
+      <button className="controls-btn btn-hover" onClick={previousSong}>
         <PlaySkipBackIcon />
       </button>
-      <button className="controls-btn" onClick={handlePlayBack}>
+      <button className="controls-btn btn-hover" onClick={handlePlayBack}>
         <PlayBackIcon />
       </button>
-      <button className="controls-btn" onClick={togglePlayPause}>
+      <button className="controls-btn btn-hover" onClick={togglePlayPause}>
         {isPlaying ? <PauseIcon /> : <PlayIcon />}
       </button>
-      <button className="controls-btn" onClick={handlePlayForward}>
+      <button className="controls-btn btn-hover" onClick={handlePlayForward}>
         <PlayForwardIcon />
       </button>
-      <button className="controls-btn" onClick={handleNextSong}>
+      <button className="controls-btn btn-hover" onClick={handleNextSong}>
         <PlaySkipForwardIcon />
       </button>
-      <button className="controls-btn">
-        <RepeatIcon />
+      <button className="controls-btn" onClick={handleLooping}>
+        {isLoop ? <RepeatClickedIcon /> : <RepeatIcon />}
       </button>
     </div>
   );
