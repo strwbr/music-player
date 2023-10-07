@@ -40,7 +40,6 @@ const Player = ({ tracks }) => {
     <div className="audio-player">
       <TrackInfo track={tracks[trackIndex]} />
       <audio
-        controls
         src={tracks[trackIndex].src}
         ref={audioPlayerRef}
         onLoadedMetadata={onLoadedMetadata}

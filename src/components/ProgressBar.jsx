@@ -1,20 +1,14 @@
 import React from "react";
-
+import { formatTime } from "../utils";
 const ProgressBar = ({
   progressBarRef,
   audioPlayerRef,
   timeProgress,
   duration,
 }) => {
-  const handleProgressTimeChange = () => {
-    // audioPlayerRef.current.audioEl.current.currentTime =
-    //   progressBarRef.current.value;
-    audioPlayerRef.current.currentTime = progressBarRef.current.value;
-  };
-
   return (
     <div className="progress-bar">
-      <span>01:15</span>
+      <span>{formatTime(timeProgress)}</span>
       <input
         type="range"
         ref={progressBarRef}
@@ -22,7 +16,7 @@ const ProgressBar = ({
         value={timeProgress}
         onChange={(e) => (audioPlayerRef.current.currentTime = e.target.value)}
       />
-      <span>03:56</span>
+      <span>{formatTime(duration)}</span>
     </div>
   );
 };
