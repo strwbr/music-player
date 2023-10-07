@@ -10,13 +10,13 @@ import ddayCover from "./songs_covers/d-day_cover.jpg";
 import takeTwoCover from "./songs_covers/takeTwo_cover.jpg";
 
 export const tracks = [
-  {
-    id: 1,
-    title: "Cartoon Toy",
-    artist: "from free resourse",
-    src: cartoonToy,
-    cover: undefined,
-  },
+  // {
+  //   id: 1,
+  //   title: "Cartoon Toy",
+  //   artist: "from free resourse",
+  //   src: cartoonToy,
+  //   cover: undefined,
+  // },
   {
     id: 2,
     title: "Like Crazy",

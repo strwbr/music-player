@@ -1,17 +1,19 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import ProgressBar from "./ProgressBar";
 import Controls from "./Controls";
 import TrackInfo from "./TrackInfo";
-import ReactAudioPlayer from "react-audio-player";
+// import ReactAudioPlayer from "react-audio-player";
 
 const Player = ({ tracks }) => {
   const [trackIndex, setTrackIndex] = useState(0);
-  // const [currentTrack, setCurrentTrack] = useState(tracks[trackIndex]);
   const [isRandom, setIsPandom] = useState(false);
   const [isLoop, setLoop] = useState(false);
+  const [timeProgress, setTimeProgress] = useState(0);
+  const [duration, setDuration] = useState(0);
 
   // ссылка на элемент аудио
   const audioPlayerRef = useRef();
+  const progressBarRef = useRef();
 
   const handleNextSong = () => {
     let newIndex = (trackIndex + 1) % tracks.length;
@@ -24,24 +26,39 @@ const Player = ({ tracks }) => {
     //   ? Math.floor(Math.random() * tracks.length)
     //   : (trackIndex + 1) % tracks.length;
     setTrackIndex(newIndex);
-    // setCurrentTrack(tracks[newIndex]);
     console.log("handleNextSong()");
+  };
+
+  const onLoadedMetadata = () => {
+    // const dur = audioPlayerRef.current.audioEl.current.duration;
+    const dur = audioPlayerRef.current.duration;
+    setDuration(dur);
+    progressBarRef.current.max = dur;
   };
 
   return (
     <div className="audio-player">
       <TrackInfo track={tracks[trackIndex]} />
-      <ReactAudioPlayer
+      <audio
         controls
         src={tracks[trackIndex].src}
         ref={audioPlayerRef}
-        onPlay={() => console.log("onPlay event")}
+        onLoadedMetadata={onLoadedMetadata}
+        onTimeUpdate={(e) => setTimeProgress(e.target.currentTime)}
+        onPlay={(e) => {
+          console.log("onPlay()");
+        }}
         onPause={() => console.log("onPause event")}
         onEnded={handleNextSong}
         loop={isLoop}
       />
       {/* <button onClick={() => console.log(getSrc())}>Get src</button> */}
-      <ProgressBar />
+      <ProgressBar
+        progressBarRef={progressBarRef}
+        audioPlayerRef={audioPlayerRef}
+        timeProgress={timeProgress}
+        duration={duration}
+      />
       <Controls
         audioPlayerRef={audioPlayerRef}
         isRandom={isRandom}
@@ -52,7 +69,6 @@ const Player = ({ tracks }) => {
         tracks={tracks}
         isLoop={isLoop}
         setLoop={setLoop}
-        // currentTrack={currentTrack}
       />
     </div>
   );

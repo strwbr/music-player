@@ -17,7 +17,6 @@ const Controls = ({
   isRandom,
   setIsRandom,
   handleNextSong,
-  currentTrack,
   trackIndex,
   setTrackIndex,
   tracks,
@@ -44,12 +43,14 @@ const Controls = ({
   };
 
   const handlePlayForward = () => {
-    audioPlayerRef.current.audioEl.current.currentTime += 10;
+    // audioPlayerRef.current.audioEl.current.currentTime += 10;
+    audioPlayerRef.current.currentTime += 10;
     console.log("handlePlayForward()");
   };
 
   const handlePlayBack = () => {
-    audioPlayerRef.current.audioEl.current.currentTime -= 10;
+    // audioPlayerRef.current.audioEl.current.currentTime -= 10;
+    audioPlayerRef.current.currentTime -= 10;
     console.log("handlePlayBack()");
   };
 
@@ -60,12 +61,12 @@ const Controls = ({
 
   useEffect(() => {
     if (isPlaying) {
-      audioPlayerRef.current.audioEl.current.play();
+      // audioPlayerRef.current.audioEl.current.play();
+      audioPlayerRef.current.play();
     } else {
-      audioPlayerRef.current.audioEl.current.pause();
+      // audioPlayerRef.current.audioEl.current.pause();
+      audioPlayerRef.current.pause();
     }
-    // nextSong ниже может вызвать ошибки???
-    // сюда наверно лучше индекс вместо
   }, [isPlaying, audioPlayerRef, trackIndex]);
 
   return (
