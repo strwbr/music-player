@@ -4,8 +4,7 @@ import Controls from "./Controls";
 import TrackInfo from "./TrackInfo";
 // import ReactAudioPlayer from "react-audio-player";
 
-const Player = ({ tracks }) => {
-  const [trackIndex, setTrackIndex] = useState(0);
+const Player = ({ tracks, trackIndex, setTrackIndex }) => {
   const [isRandom, setIsPandom] = useState(false);
   const [isLoop, setLoop] = useState(false);
   const [timeProgress, setTimeProgress] = useState(0);

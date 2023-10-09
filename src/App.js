@@ -5,10 +5,15 @@ import Playlist from "./components/Playlist";
 import { tracks } from "./data/tracks";
 
 function App() {
+  const [trackIndex, setTrackIndex] = useState(0);
   return (
     <div className="App">
-      {/* <Playlist /> */}
-      <Player currentTrack={tracks[0]} tracks={tracks} />
+      <Playlist setTrackIndex={setTrackIndex} />
+      <Player
+        tracks={tracks}
+        trackIndex={trackIndex}
+        setTrackIndex={setTrackIndex}
+      />
     </div>
   );
 }
