@@ -1,5 +1,5 @@
 // songs imports
-import cartoonToy from "./songs/mixkit-cartoon-toy-whistle-616.wav";
+// import cartoonToy from "./songs/mixkit-cartoon-toy-whistle-616.wav";
 import likeCrazy from "./songs/like_crazy.mp3";
 import dday from "./songs/d_day.mp3";
 import takeTwo from "./songs/take_two.mp3";
@@ -26,6 +26,7 @@ export const tracks = [
     artist: "j-hope",
     src: more,
     cover: moreCover,
+    duration: "3:00",
   },
   {
     id: 2,
@@ -33,6 +34,7 @@ export const tracks = [
     artist: "Jimin",
     src: likeCrazy,
     cover: likeCrazyCover,
+    duration: "3:32",
   },
   {
     id: 3,
@@ -40,6 +42,7 @@ export const tracks = [
     artist: "Agust-D",
     src: dday,
     cover: ddayCover,
+    duration: "3:31",
   },
   {
     id: 4,
@@ -47,6 +50,7 @@ export const tracks = [
     artist: "BTS",
     src: takeTwo,
     cover: takeTwoCover,
+    duration: "3:49",
   },
   {
     id: 5,
@@ -54,5 +58,46 @@ export const tracks = [
     artist: "BTS",
     src: runBts,
     cover: undefined,
+    duration: "3:25",
   },
+  // {
+  //   id: 6,
+  //   title: "MORE",
+  //   artist: "j-hope",
+  //   src: more,
+  //   cover: moreCover,
+  //   duration: "3:00",
+  // },
+  // {
+  //   id: 7,
+  //   title: "Like Crazy",
+  //   artist: "Jimin",
+  //   src: likeCrazy,
+  //   cover: likeCrazyCover,
+  //   duration: "3:32",
+  // },
+  // {
+  //   id: 8,
+  //   title: "D-Day",
+  //   artist: "Agust-D",
+  //   src: dday,
+  //   cover: ddayCover,
+  //   duration: "3:31",
+  // },
+  // {
+  //   id: 9,
+  //   title: "Take Two",
+  //   artist: "BTS",
+  //   src: takeTwo,
+  //   cover: takeTwoCover,
+  //   duration: "3:49",
+  // },
+  // {
+  //   id: 10,
+  //   title: "Run BTS",
+  //   artist: "BTS",
+  //   src: runBts,
+  //   cover: undefined,
+  //   duration: "3:25",
+  // },
 ];

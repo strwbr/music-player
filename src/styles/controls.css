@@ -3,6 +3,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  border: 2px solid orange;
 }
 
 .controls-btn {
@@ -20,6 +21,5 @@
 }
 
 .btn-hover svg:hover path {
-  fill:red
+  fill: #38bdf8;
 }
-

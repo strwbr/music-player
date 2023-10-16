@@ -13,11 +13,7 @@ const TrackInfo = ({ track }) => {
             alt={`Song cover: ${track.title} by ${track.artist}`}
           />
         ) : (
-          <div>
-            <span>
-              <DefaultCover />
-            </span>
-          </div>
+          <DefaultCover />
         )}
       </div>
       <div className="audio-title">

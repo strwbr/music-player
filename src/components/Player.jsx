@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import ProgressBar from "./ProgressBar";
 import Controls from "./Controls";
 import TrackInfo from "./TrackInfo";
+import "../styles/player.css";
 // import ReactAudioPlayer from "react-audio-player";
 
 const Player = ({ tracks, trackIndex, setTrackIndex }) => {
@@ -36,7 +37,7 @@ const Player = ({ tracks, trackIndex, setTrackIndex }) => {
   };
 
   return (
-    <div className="audio-player">
+    <div className="player">
       <TrackInfo track={tracks[trackIndex]} />
       <audio
         src={tracks[trackIndex].src}

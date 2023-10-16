@@ -6,9 +6,10 @@ import { tracks } from "./data/tracks";
 
 function App() {
   const [trackIndex, setTrackIndex] = useState(0);
+
   return (
     <div className="App">
-      <Playlist setTrackIndex={setTrackIndex} />
+      <Playlist tracks={tracks} setTrackIndex={setTrackIndex} />
       <Player
         tracks={tracks}
         trackIndex={trackIndex}
