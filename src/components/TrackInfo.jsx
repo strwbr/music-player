@@ -5,8 +5,8 @@ import "../styles/track-info.css";
 
 const TrackInfo = ({ track }) => {
   return (
-    <div className="audio-info">
-      <div className="audio-cover">
+    <div className="track-info">
+      <div className="track-cover">
         {track.cover ? (
           <img
             src={track.cover}
@@ -16,9 +16,9 @@ const TrackInfo = ({ track }) => {
           <DefaultCover />
         )}
       </div>
-      <div className="audio-title">
-        <p>{track?.title}</p>
-        <p>{track?.artist}</p>
+      <div className="track-title">
+        <h1>{track?.title}</h1>
+        <h3>{track?.artist}</h3>
       </div>
     </div>
   );

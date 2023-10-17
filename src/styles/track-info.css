@@ -1,27 +1,40 @@
-.audio-info {
+.track-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 1.8em 0 1.8em 0;
+  gap: 1em;
+  border: 2px solid red;
+}
+
+.track-cover {
+  height: fit-content;
+  text-align: center;
+}
+
+.track-cover img {
+  width: 18.5em;
+  height: 18.5em;
+  border-radius: 15%;
+}
+
+.track-title {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px;
-  border: 2px solid red;
+  gap: 0.4em;
 }
 
-.audio-cover {
-  width: 100px;
-  height: 100px;
+.track-title h1 {
+  color: #fff;
+  margin: 0;
 }
 
-.audio-cover img {
-  width: 100%;
-  height: 100%;
-  border-radius: 15%;
-}
-
-.audio-title {
-  padding: 10px;
-}
-
-.audio-title p {
-  font-size: large;
+.track-title h3 {
+  color: #6d7d8c;
+  font-weight: 600;
+  margin: 0;
 }
