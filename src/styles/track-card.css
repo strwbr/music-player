@@ -6,7 +6,8 @@
   display: grid;
   grid-template-areas: "cover info duration";
   column-gap: 2em;
-  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: 0.5fr 2.5fr 1fr;
   align-items: center;
   border-radius: 0.5em;
   /* border: 2px solid blue; */
