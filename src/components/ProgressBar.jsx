@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { formatTime } from "../utils";
 import "../styles/progress-bar.css";
 
@@ -10,16 +10,30 @@ const ProgressBar = ({
 }) => {
   const handleChange = (e) => {
     const currentValue = e.target.value;
-    progressBarRef.current.style.setProperty(
-      "--range-progress",
-      `${(currentValue / duration) * 100}%`
-    );
+    const maxValue = e.target.max || 100;
+    const fillPercentage = (currentValue / maxValue) * 100;
     audioPlayerRef.current.currentTime = currentValue;
+
+    progressBarRef.current.style.setProperty(
+      "--fill-percentage",
+      fillPercentage + "%"
+    );
+    // progressBarRef.current.style.backgroundSize = fillPercentage + "% 100%";
   };
+
+  useEffect(() => {
+    const currentValue = progressBarRef.current.value;
+    const maxValue = progressBarRef.current.max || 100;
+    const fillPercentage = (currentValue / maxValue) * 100;
+    progressBarRef.current.style.setProperty(
+      "--fill-percentage",
+      fillPercentage + "%"
+    );
+  }, [timeProgress, duration, progressBarRef]);
 
   return (
     <div className="progress-bar">
-      <span>{formatTime(timeProgress)}</span>
+      <span id="time-progress">{formatTime(timeProgress)}</span>
       <input
         type="range"
         ref={progressBarRef}
@@ -27,7 +41,7 @@ const ProgressBar = ({
         value={timeProgress}
         onChange={(e) => handleChange(e)}
       />
-      <span>{formatTime(duration)}</span>
+      <span id="duration">{formatTime(duration)}</span>
     </div>
   );
 };

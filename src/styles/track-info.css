@@ -4,7 +4,8 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 1.8em 0 0.5em 0;
+  /* padding: 1.8em 0 0.5em 0; */
+  padding-top: 1.8em;
   gap: 1em;
   /* border: 2px solid red; */
 }
@@ -31,10 +32,12 @@
 .track-title h1 {
   color: #fff;
   margin: 0;
+  /* letter-spacing: 2px; */
 }
 
 .track-title h3 {
   color: #6d7d8c;
   font-weight: 600;
   margin: 0;
+  /* letter-spacing: 1px; */
 }
