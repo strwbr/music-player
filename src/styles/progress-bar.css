@@ -1,15 +1,17 @@
 .progress-bar {
   display: grid;
   grid-template-areas: "cur-time range dur";
-  grid-template-columns: 0.4fr 2fr 0.4fr;
-  padding: 1em 0.5em;
+  grid-template-columns: 0.5fr 3fr 0.5fr;
+  padding: 1em 0.2em;
+  gap: 0.1em;
+  /* margin: 0 1em 0 1em; */
   /* border: 2px solid green; */
 }
 
 .progress-bar span {
   color: #6d7d8c;
   font-weight: 400;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .progress-bar input[type="range"] {
@@ -44,8 +46,10 @@
 
 #time-progress {
   grid-area: cur-time;
+  text-align: left;
 }
 
 #duration {
   grid-area: dur;
+  text-align: right;
 }

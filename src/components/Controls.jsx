@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { ReactComponent as PlayIcon } from "../assets/icons/play.svg";
 import { ReactComponent as PauseIcon } from "../assets/icons/pause.svg";
-import { ReactComponent as PlayBackIcon } from "../assets/icons/play_back.svg";
-import { ReactComponent as PlayForwardIcon } from "../assets/icons/play_forward.svg";
+// import { ReactComponent as PlayBackIcon } from "../assets/icons/play_back.svg";
+// import { ReactComponent as PlayForwardIcon } from "../assets/icons/play_forward.svg";
 import { ReactComponent as RepeatIcon } from "../assets/icons/repeat.svg";
 import { ReactComponent as RepeatClickedIcon } from "../assets/icons/repeat-clicked.svg";
 import { ReactComponent as ShuffleIcon } from "../assets/icons/shuffle.svg";
 import { ReactComponent as ShuffleClickedIcon } from "../assets/icons/shuffle-clicked.svg";
-import { ReactComponent as PlaySkipBackIcon } from "../assets/icons/play_skip_back.svg";
-import { ReactComponent as PlaySkipForwardIcon } from "../assets/icons/play_skip_forward.svg";
-
+import { ReactComponent as SkipIcon } from "../assets/icons/play_skip_back.svg";
+// import { ReactComponent as PlaySkipBackIcon } from "../assets/icons/play_skip_back.svg";
+// import { ReactComponent as PlaySkipForwardIcon } from "../assets/icons/play_skip_forward.svg";
+import { ReactComponent as RewindIcon } from "../assets/icons/rewind.svg";
 import "../styles/controls.css";
 
 const Controls = ({
@@ -71,23 +72,33 @@ const Controls = ({
 
   return (
     <div className="controls">
-      <button className="controls-btn shuffle" onClick={handleShuffle}>
+      <button className="controls-btn" onClick={handleShuffle}>
         {isRandom ? <ShuffleClickedIcon /> : <ShuffleIcon />}
       </button>
       <button className="controls-btn btn-hover" onClick={previousSong}>
-        <PlaySkipBackIcon />
+        {/* <PlaySkipBackIcon /> */}
+        <SkipIcon />
       </button>
       <button className="controls-btn btn-hover" onClick={handlePlayBack}>
-        <PlayBackIcon />
+        {/* <PlayBackIcon /> */}
+        <RewindIcon />
       </button>
       <button className="controls-btn btn-hover" onClick={togglePlayPause}>
         {isPlaying ? <PauseIcon /> : <PlayIcon />}
       </button>
-      <button className="controls-btn btn-hover" onClick={handlePlayForward}>
-        <PlayForwardIcon />
+      <button
+        className="controls-btn btn-hover reflected"
+        onClick={handlePlayForward}
+      >
+        {/* <PlayForwardIcon /> */}
+        <RewindIcon />
       </button>
-      <button className="controls-btn btn-hover" onClick={handleNextSong}>
-        <PlaySkipForwardIcon />
+      <button
+        className="controls-btn btn-hover reflected"
+        onClick={handleNextSong}
+      >
+        {/* <PlaySkipForwardIcon /> */}
+        <SkipIcon />
       </button>
       <button className="controls-btn" onClick={handleLooping}>
         {isLoop ? <RepeatClickedIcon /> : <RepeatIcon />}
