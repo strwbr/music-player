@@ -16,9 +16,10 @@
 }
 
 .track-cover img {
-  width: 21em;
-  height: 21em;
+  width: 23em;
+  height: 23em;
   border-radius: 15%;
+  /* object-fit: fill; */
 }
 
 .track-title {

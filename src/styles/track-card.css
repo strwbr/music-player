@@ -7,19 +7,19 @@
   grid-template-areas: "cover info duration";
   column-gap: 2em;
   /* grid-template-columns: repeat(3, 1fr); */
-  grid-template-columns: 0.5fr 2.5fr 1fr;
+  grid-template-columns: 0.5fr 3fr 1fr;
   align-items: center;
   border-radius: 0.5em;
   /* border: 2px solid blue; */
   /* border-top: 1px solid #6d7d8c;
   border-bottom: 1px solid #6d7d8c; */
-  padding-top: 0.3em;
+  /* padding-top: 0.3em; */
 }
 
 .cover-div {
   grid-area: cover;
   text-align: center;
-  padding-left: 1em;
+  /* padding-left: 1em; */
 }
 
 .cover-div img {
@@ -57,7 +57,7 @@
 .duration-div {
   grid-area: duration;
   text-align: end;
-  padding-right: 1em;
+  /* padding-right: 1em; */
   color: #6d7d8c;
   font-weight: 600;
 }

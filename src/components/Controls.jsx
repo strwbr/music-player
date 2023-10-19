@@ -72,35 +72,35 @@ const Controls = ({
 
   return (
     <div className="controls">
-      <button className="controls-btn" onClick={handleShuffle}>
+      <button className="controls-btn btn-hover less" onClick={handleShuffle}>
         {isRandom ? <ShuffleClickedIcon /> : <ShuffleIcon />}
       </button>
-      <button className="controls-btn btn-hover" onClick={previousSong}>
+      <button className="controls-btn btn-hover less" onClick={previousSong}>
         {/* <PlaySkipBackIcon /> */}
         <SkipIcon />
       </button>
-      <button className="controls-btn btn-hover" onClick={handlePlayBack}>
+      <button className="controls-btn btn-hover less" onClick={handlePlayBack}>
         {/* <PlayBackIcon /> */}
         <RewindIcon />
       </button>
-      <button className="controls-btn btn-hover" onClick={togglePlayPause}>
+      <button className="controls-btn btn-hover play" onClick={togglePlayPause}>
         {isPlaying ? <PauseIcon /> : <PlayIcon />}
       </button>
       <button
-        className="controls-btn btn-hover reflected"
+        className="controls-btn btn-hover reflected less"
         onClick={handlePlayForward}
       >
         {/* <PlayForwardIcon /> */}
         <RewindIcon />
       </button>
       <button
-        className="controls-btn btn-hover reflected"
+        className="controls-btn btn-hover reflected less"
         onClick={handleNextSong}
       >
         {/* <PlaySkipForwardIcon /> */}
         <SkipIcon />
       </button>
-      <button className="controls-btn" onClick={handleLooping}>
+      <button className="controls-btn btn-hover less" onClick={handleLooping}>
         {isLoop ? <RepeatClickedIcon /> : <RepeatIcon />}
       </button>
     </div>

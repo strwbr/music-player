@@ -1,12 +1,12 @@
 .progress-bar {
   display: grid;
-  grid-template-areas: 
-  "range"
-  "time";
+  grid-template-areas:
+    "range"
+    "time";
   grid-template-columns: repeat(1, 1fr);
   /* grid-template-columns: 0.5fr 3fr 0.5fr; */
-  padding: 1em 0.2em 0.3em 0.2em;
-  gap: 0.2em;
+  padding: 1em 0.2em 0.5em 0.2em;
+  gap: 0.5em;
   /* margin: 0 1em 0 1em; */
   /* border: 2px solid green; */
 }
@@ -51,6 +51,12 @@
   height: 1.2em;
   width: 1.2em;
   border-radius: 50%;
+  /* transition: background 0.3s ease-in-out; */
+}
+
+.progress-bar input[type="range"]::-webkit-slider-thumb:hover {
+  border: 2px solid #fff;
+  background-color: #38bdf8;
   /* transition: background 0.3s ease-in-out; */
 }
 
