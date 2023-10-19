@@ -1,11 +1,21 @@
 .progress-bar {
   display: grid;
-  grid-template-areas: "cur-time range dur";
-  grid-template-columns: 0.5fr 3fr 0.5fr;
-  padding: 1em 0.2em;
-  gap: 0.1em;
+  grid-template-areas: 
+  "range"
+  "time";
+  grid-template-columns: repeat(1, 1fr);
+  /* grid-template-columns: 0.5fr 3fr 0.5fr; */
+  padding: 1em 0.2em 0.3em 0.2em;
+  gap: 0.2em;
   /* margin: 0 1em 0 1em; */
   /* border: 2px solid green; */
+}
+
+.time-info {
+  grid-area: time;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .progress-bar span {
@@ -45,11 +55,11 @@
 }
 
 #time-progress {
-  grid-area: cur-time;
+  /* grid-area: cur-time; */
   text-align: left;
 }
 
 #duration {
-  grid-area: dur;
+  /* grid-area: dur; */
   text-align: right;
 }

@@ -33,7 +33,6 @@ const ProgressBar = ({
 
   return (
     <div className="progress-bar">
-      <span id="time-progress">{formatTime(timeProgress)}</span>
       <input
         type="range"
         ref={progressBarRef}
@@ -41,7 +40,10 @@ const ProgressBar = ({
         value={timeProgress}
         onChange={(e) => handleChange(e)}
       />
-      <span id="duration">{formatTime(duration)}</span>
+      <div className="time-info">
+        <span id="time-progress">{formatTime(timeProgress)}</span>
+        <span id="duration">{formatTime(duration)}</span>
+      </div>
     </div>
   );
 };
