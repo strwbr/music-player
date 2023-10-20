@@ -13,13 +13,20 @@
 .track-cover {
   height: fit-content;
   text-align: center;
+  /* vertical-align: center; */
 }
 
 .track-cover img {
-  width: 23em;
-  height: 23em;
+  width: 22em;
+  height: 22em;
   border-radius: 15%;
   /* object-fit: fill; */
+}
+
+.track-cover svg {
+  width: 22em;
+  height: 22em;
+  text-align: center;
 }
 
 .track-title {

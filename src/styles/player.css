@@ -1,6 +1,9 @@
 .player {
+/* position: fixed; */
   display: flex;
   flex-direction: column;
   padding: 0.8em;
+  /* overflow: hidden; */
+  /* position: -webkit-sticky; */
   /* border: 4px solid lightskyblue; */
 }
