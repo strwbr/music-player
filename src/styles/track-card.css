@@ -9,7 +9,11 @@
   /* grid-template-columns: repeat(3, 1fr); */
   grid-template-columns: 0.5fr 3fr 1fr;
   align-items: center;
-  border-radius: 0.5em;
+  border-radius: 0.8em;
+  padding: 0.8em;
+  /* background: #050913; */
+  box-shadow: 0px 0px 50px 0px rgba(5, 9, 19, 1);
+
   /* border: 2px solid blue; */
   /* border-top: 1px solid #6d7d8c;
   border-bottom: 1px solid #6d7d8c; */
@@ -21,6 +25,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  /* border: 2px solid #fff; */
+  /* border-radius: 17%; */
   /* text-align: center; */
   /* padding-left: 1em; */
 }
@@ -33,18 +39,20 @@
   /* margin-top: 3px;
   margin-left: 3px; */
 }
-/* .title-div {
-  grid-area: title;
-}
 
-.artist-div {
-  grid-area: artist;
-} */
+.cover-div svg {
+  padding: 0.3em;
+  border-radius: 15%;
+  /* background-color: #fff; */
+}
 
 .info-div {
   grid-area: info;
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+  gap: 0.1em;
 }
 
 .info-div h3 {
@@ -60,12 +68,14 @@
 
 .duration-div {
   grid-area: duration;
-  text-align: end;
+  text-align: center;
   /* padding-right: 1em; */
   color: #6d7d8c;
   font-weight: 600;
 }
 
-.track-card:active {
-  background-color: bisque;
+.track-card:hover {
+  /* box-shadow: 0px 0px 50px 0px rgba(5, 9, 19, 1); */
+  background: #152448;
+  /* padding: 0.8em; */
 }

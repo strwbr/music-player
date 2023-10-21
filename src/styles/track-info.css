@@ -6,27 +6,31 @@
   justify-content: center;
   /* padding: 1.8em 0 0.5em 0; */
   /* padding-top: 1.8em; */
-  gap: 0.5em;
+  gap: 1em;
   /* border: 2px solid red; */
 }
 
 .track-cover {
-  height: fit-content;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: fit-content; */
+  /* border: 0.5em solid #fff; */
+  /* border-radius: 17%; */
   /* vertical-align: center; */
 }
 
 .track-cover img {
   width: 22em;
   height: 22em;
-  border-radius: 15%;
-  /* object-fit: fill; */
+  border-radius: 0.8em;
 }
 
 .track-cover svg {
   width: 22em;
   height: 22em;
-  text-align: center;
+  padding: 2em;
+  border-radius: 0.8em;
 }
 
 .track-title {
