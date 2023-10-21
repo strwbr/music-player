@@ -6,7 +6,8 @@
   justify-content: center;
   /* padding: 1.8em 0 0.5em 0; */
   /* padding-top: 1.8em; */
-  gap: 1em;
+  gap: 1.3em;
+  margin: 1.6em 1.6em 0.8em;
   /* border: 2px solid red; */
 }
 
@@ -21,8 +22,8 @@
 }
 
 .track-cover img {
-  width: 22em;
-  height: 22em;
+  width: 23em;
+  height: 23em;
   border-radius: 0.8em;
 }
 
