@@ -9,7 +9,11 @@ function App() {
 
   return (
     <div className="App">
-      <Playlist tracks={tracks} setTrackIndex={setTrackIndex} />
+      <Playlist
+        tracks={tracks}
+        trackIndex={trackIndex}
+        setTrackIndex={setTrackIndex}
+      />
       <Player
         tracks={tracks}
         trackIndex={trackIndex}

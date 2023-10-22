@@ -20,6 +20,10 @@
   /* padding-top: 0.3em; */
 }
 
+.track-card.active {
+  background: red;
+}
+
 .cover-div {
   grid-area: cover;
   display: flex;

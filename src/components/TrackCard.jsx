@@ -3,9 +3,11 @@ import { ReactComponent as DefaultCover } from "../assets/icons/default_cover.sv
 
 import "../styles/track-card.css";
 
-const TrackCard = ({ track, onChoose }) => {
+const TrackCard = ({ track, onChoose, isActive }) => {
+  const className = isActive ? "track-card active" : "track-card";
+
   return (
-    <div className="track-card" onClick={onChoose}>
+    <div className={className} onClick={onChoose}>
       <div className="cover-div">
         {track.cover ? (
           <img

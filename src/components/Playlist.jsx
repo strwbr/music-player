@@ -3,9 +3,9 @@ import TrackCard from "./TrackCard";
 // import { tracks } from "../data/tracks";
 import "../styles/playlist.css";
 
-const Playlist = ({ tracks, setTrackIndex }) => {
+const Playlist = ({ tracks, trackIndex, setTrackIndex }) => {
   const handleChooseTrack = (index) => {
-    console.log(`handleChooseTrack() - index = ${index}`);
+    // console.log(`handleChooseTrack() - index = ${index}`);
     setTrackIndex(index);
   };
 
@@ -16,6 +16,7 @@ const Playlist = ({ tracks, setTrackIndex }) => {
           key={track.id}
           track={track}
           onChoose={() => handleChooseTrack(index)}
+          isActive={index === trackIndex}
         />
       ))}
     </div>
