@@ -53,6 +53,7 @@
   height: 1.2em;
   width: 1.2em;
   border-radius: 50%;
+  box-shadow: 0px 0px 82px 4px rgba(21, 36, 72, 1);
   /* transition: background 0.3s ease-in-out; */
 }
 
