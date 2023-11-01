@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from "react";
+// Импорты svg-иконок как компонентов React
 import { ReactComponent as PlayIcon } from "../assets/icons/play.svg";
 import { ReactComponent as PauseIcon } from "../assets/icons/pause.svg";
-// import { ReactComponent as PlayBackIcon } from "../assets/icons/play_back.svg";
-// import { ReactComponent as PlayForwardIcon } from "../assets/icons/play_forward.svg";
 import { ReactComponent as RepeatIcon } from "../assets/icons/repeat.svg";
 import { ReactComponent as RepeatClickedIcon } from "../assets/icons/repeat-clicked.svg";
 import { ReactComponent as ShuffleIcon } from "../assets/icons/shuffle.svg";
 import { ReactComponent as ShuffleClickedIcon } from "../assets/icons/shuffle-clicked.svg";
 import { ReactComponent as SkipIcon } from "../assets/icons/play_skip_back.svg";
-// import { ReactComponent as PlaySkipBackIcon } from "../assets/icons/play_skip_back.svg";
-// import { ReactComponent as PlaySkipForwardIcon } from "../assets/icons/play_skip_forward.svg";
 import { ReactComponent as RewindIcon } from "../assets/icons/rewind.svg";
+// Импорт стилей
 import "../styles/controls.css";
 
 const Controls = ({
@@ -24,37 +22,30 @@ const Controls = ({
   isLoop,
   setLoop,
 }) => {
+  // Состояние - воспроизводиться ли музыка
   const [isPlaying, setIsPlaying] = useState(false);
 
   // Нажатие на кнопку Play/Pause
   const togglePlayPause = () => {
     setIsPlaying((prev) => !prev);
-    console.log("togglePlayPause()");
   };
-
+  // Переключение на предыдущую песню
   const previousSong = () => {
     setTrackIndex((prev) => (prev === 0 ? tracks.length - 1 : prev - 1));
-    console.log("previousSong()");
   };
-
+  // Включение/отключение функции Shuffle
   const handleShuffle = () => {
-    console.log(isRandom);
     setIsRandom((prev) => !prev);
-    console.log("handleShuffle()");
   };
-
+  // Перемотка трека на 10 секунд вперед
   const handlePlayForward = () => {
-    // audioPlayerRef.current.audioEl.current.currentTime += 10;
     audioPlayerRef.current.currentTime += 10;
-    console.log("handlePlayForward()");
   };
-
+  // Перемотка трека на 10 секунд назад
   const handlePlayBack = () => {
-    // audioPlayerRef.current.audioEl.current.currentTime -= 10;
     audioPlayerRef.current.currentTime -= 10;
-    console.log("handlePlayBack()");
   };
-
+  // Включение/отключение функции Loop
   const handleLooping = () => {
     setLoop((prev) => !prev);
     console.log("handleLooping()");
@@ -76,11 +67,9 @@ const Controls = ({
         {isRandom ? <ShuffleClickedIcon /> : <ShuffleIcon />}
       </button>
       <button className="control-btn less" onClick={previousSong}>
-        {/* <PlaySkipBackIcon /> */}
         <SkipIcon />
       </button>
       <button className="control-btn less" onClick={handlePlayBack}>
-        {/* <PlayBackIcon /> */}
         <RewindIcon />
       </button>
       <button className="control-btn play" onClick={togglePlayPause}>
@@ -90,11 +79,9 @@ const Controls = ({
         className="control-btn reflected less"
         onClick={handlePlayForward}
       >
-        {/* <PlayForwardIcon /> */}
         <RewindIcon />
       </button>
       <button className="control-btn reflected less" onClick={handleNextSong}>
-        {/* <PlaySkipForwardIcon /> */}
         <SkipIcon />
       </button>
       <button className="control-btn less" onClick={handleLooping}>

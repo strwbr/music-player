@@ -17,6 +17,14 @@ const TrackCard = ({ track, onChoose, isActive }) => {
         ) : (
           <DefaultCover />
         )}
+        {isActive && (
+          <div className="soundwave">
+            <div className="bar"></div>
+            <div className="bar"></div>
+            <div className="bar"></div>
+            <div className="bar"></div>
+          </div>
+        )}
       </div>
 
       <div className="info-div">
