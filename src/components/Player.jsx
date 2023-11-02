@@ -3,7 +3,6 @@ import ProgressBar from "./ProgressBar";
 import Controls from "./Controls";
 import TrackInfo from "./TrackInfo";
 import "../styles/player.css";
-// import ReactAudioPlayer from "react-audio-player";
 
 const Player = ({ tracks, trackIndex, setTrackIndex }) => {
   const [isRandom, setIsPandom] = useState(false);
@@ -22,15 +21,10 @@ const Player = ({ tracks, trackIndex, setTrackIndex }) => {
         newIndex = Math.floor(Math.random() * tracks.length);
       } while (trackIndex === newIndex);
     }
-    // let newIndex = isRandom
-    //   ? Math.floor(Math.random() * tracks.length)
-    //   : (trackIndex + 1) % tracks.length;
     setTrackIndex(newIndex);
-    console.log("handleNextSong()");
   };
 
   const onLoadedMetadata = () => {
-    // const dur = audioPlayerRef.current.audioEl.current.duration;
     const dur = audioPlayerRef.current.duration;
     setDuration(dur);
     progressBarRef.current.max = dur;
@@ -51,7 +45,6 @@ const Player = ({ tracks, trackIndex, setTrackIndex }) => {
         onEnded={handleNextSong}
         loop={isLoop}
       />
-      {/* <button onClick={() => console.log(getSrc())}>Get src</button> */}
       <ProgressBar
         progressBarRef={progressBarRef}
         audioPlayerRef={audioPlayerRef}

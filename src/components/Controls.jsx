@@ -48,15 +48,12 @@ const Controls = ({
   // Включение/отключение функции Loop
   const handleLooping = () => {
     setLoop((prev) => !prev);
-    console.log("handleLooping()");
   };
 
   useEffect(() => {
     if (isPlaying) {
-      // audioPlayerRef.current.audioEl.current.play();
       audioPlayerRef.current.play();
     } else {
-      // audioPlayerRef.current.audioEl.current.pause();
       audioPlayerRef.current.pause();
     }
   }, [isPlaying, audioPlayerRef, trackIndex]);

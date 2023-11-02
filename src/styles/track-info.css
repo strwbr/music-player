@@ -4,21 +4,14 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  /* padding: 1.8em 0 0.5em 0; */
-  /* padding-top: 1.8em; */
   gap: 1.3em;
   margin: 2.2em 2.4em 0.8em;
-  /* border: 2px solid red; */
 }
 
 .track-cover {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* height: fit-content; */
-  /* border: 0.5em solid #fff; */
-  /* border-radius: 17%; */
-  /* vertical-align: center; */
 }
 
 .track-cover img {
@@ -45,12 +38,10 @@
 .track-title h1 {
   color: #fff;
   margin: 0;
-  /* letter-spacing: 2px; */
 }
 
 .track-title h3 {
   color: #6d7d8c;
   font-weight: 600;
   margin: 0;
-  /* letter-spacing: 1px; */
 }

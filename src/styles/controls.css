@@ -4,10 +4,6 @@
   gap: 0.3em;
   border-top: 2px solid #152448;
   padding: 1em 1.4em;
-  /* padding-top: 1em; */
-  /* text-align: center; */
-  /* background: #1a2e43; */
-  /* border: 2px solid orange; */
 }
 
 .control-btn {
@@ -15,8 +11,6 @@
   height: 4em;
   padding: 0;
   background: transparent;
-  /* text-align: center; */
-  /* background-color: white; */
   border-style: none;
   cursor: pointer;
 }
@@ -34,21 +28,6 @@
 .reflected {
   transform: scale(-1, 1);
 }
-/* 
-.play svg {
-  width: 100%;
-  height: 100%;
-} */
-
-/* .less svg {
-  width: 65%;
-  height: 65%;
-} */
-
-/* .controls-btn svg {
-  width: 90%;
-  height: 90%;
-} */
 
 .control-btn svg:hover path {
   fill: #38bdf8;

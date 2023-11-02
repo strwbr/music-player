@@ -18,7 +18,6 @@ const ProgressBar = ({
       "--fill-percentage",
       fillPercentage + "%"
     );
-    // progressBarRef.current.style.backgroundSize = fillPercentage + "% 100%";
   };
 
   useEffect(() => {
@@ -36,7 +35,6 @@ const ProgressBar = ({
       <input
         type="range"
         ref={progressBarRef}
-        // defaultValue={0}
         value={timeProgress}
         onChange={(e) => handleChange(e)}
       />

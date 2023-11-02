@@ -4,14 +4,12 @@
   justify-content: start;
   gap: 0.95em;
   padding: 2em 3em;
-  /* border: 1px solid greenyellow; */
   height: 44em;
   overflow-y: auto;
 }
 
 .playlist::-webkit-scrollbar {
   width: 5px;
-  /* padding-top: 10em; */
 }
 
 .playlist::-webkit-scrollbar-thumb {
