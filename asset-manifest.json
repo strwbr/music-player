@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/music-player/static/css/main.f0f8c697.css",
+    "main.js": "/music-player/static/js/main.75ef35c0.js",
+    "static/media/rise.mp3": "/music-player/static/media/rise.4e2ad695f38b7611901a.mp3",
+    "static/media/sweet-love.mp3": "/music-player/static/media/sweet-love.cda74bf79df42a509d5c.mp3",
+    "static/media/warm-feeling.mp3": "/music-player/static/media/warm-feeling.59b0dcb375b533e65a58.mp3",
+    "static/media/a-trip-to-the-trees.mp3": "/music-player/static/media/a-trip-to-the-trees.8bea0c57b1b884a53055.mp3",
+    "static/media/summer-way.mp3": "/music-player/static/media/summer-way.0e7994c4b86492273de3.mp3",
+    "static/media/butterfly.mp3": "/music-player/static/media/butterfly.151bb12491f3a3da136c.mp3",
+    "static/media/stay-free.mp3": "/music-player/static/media/stay-free.7b94e99c18f6af6920c8.mp3",
+    "static/media/euphoria.mp3": "/music-player/static/media/euphoria.882fb446d909473dfb02.mp3",
+    "static/media/happy-pop.mp3": "/music-player/static/media/happy-pop.2da60afe9856d9b111be.mp3",
+    "static/media/this-is-beauty.mp3": "/music-player/static/media/this-is-beauty.19514f9f854b7c5d442e.mp3",
+    "static/media/future-beat-expedition-pop.mp3": "/music-player/static/media/future-beat-expedition-pop.5da744748da5890406e2.mp3",
+    "static/media/sunset.mp3": "/music-player/static/media/sunset.57af3da32184fe0bfcd2.mp3",
+    "static/media/warm-feeling-cover.jpg": "/music-player/static/media/warm-feeling-cover.87e03efaf2c8cf153ccd.jpg",
+    "static/media/summer-way-cover.jpg": "/music-player/static/media/summer-way-cover.73644ce2f8730a93fc1a.jpg",
+    "static/media/this-is-beauty-cover.jpg": "/music-player/static/media/this-is-beauty-cover.57c8d73121e06eac8c40.jpg",
+    "static/media/sweet-love-cover.jpg": "/music-player/static/media/sweet-love-cover.345e20168ecc54a0700d.jpg",
+    "static/media/euphoria-cover.jpg": "/music-player/static/media/euphoria-cover.7469ff8edb47ecf68727.jpg",
+    "static/media/stay-free-cover.jpg": "/music-player/static/media/stay-free-cover.5a888298d70f14d1b6b5.jpg",
+    "static/media/shuffle-clicked.svg": "/music-player/static/media/shuffle-clicked.193b5abbbfe163c5596b15f4f8019891.svg",
+    "static/media/shuffle.svg": "/music-player/static/media/shuffle.a4cb89112408393af3a1ce19a2cde8bb.svg",
+    "static/media/repeat-clicked.svg": "/music-player/static/media/repeat-clicked.577499d9bb51bebf219f2e1d34eda75c.svg",
+    "index.html": "/music-player/index.html",
+    "static/media/repeat.svg": "/music-player/static/media/repeat.fe8cd0181c4710dac7826b9a8ad21855.svg",
+    "static/media/default_cover.svg": "/music-player/static/media/default_cover.8e6fb94e961257cf46f2fef71eae837f.svg",
+    "static/media/rewind.svg": "/music-player/static/media/rewind.1eccbecaef1bc66d0427fb6f25fe53af.svg",
+    "static/media/pause.svg": "/music-player/static/media/pause.bcac878e21a0cedca6d238b92fa897c9.svg",
+    "static/media/play_skip_back.svg": "/music-player/static/media/play_skip_back.1ba5d7f16aa34db2e7fe53170d6e88e1.svg",
+    "static/media/play.svg": "/music-player/static/media/play.6f92ae1b5eb272a16c36d7715233e7d4.svg",
+    "main.f0f8c697.css.map": "/music-player/static/css/main.f0f8c697.css.map",
+    "main.75ef35c0.js.map": "/music-player/static/js/main.75ef35c0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f0f8c697.css",
+    "static/js/main.75ef35c0.js"
+  ]
+}
